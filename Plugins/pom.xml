@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <groupId>com.gopikrishna19.maven-tutorial</groupId>
+    <artifactId>Plugins</artifactId>
+    <version>0.0.0</version>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- compiler plugin defaults to java 1.5, so it is better to customize it. -->
+                <!-- Warning from IDE: "Warning:java: source value 1.5 is obsolete and will be removed in a future release" -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
