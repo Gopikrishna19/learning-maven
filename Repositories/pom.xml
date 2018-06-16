@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <groupId>com.gopikrishna19.maven-tutorial</groupId>
+    <artifactId>Repositories</artifactId>
+    <version>0.0.0</version>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+
+    <!-- Local repo is at ~/.m2 like local clone of a git -->
+    <!-- Usual dependency repo is at http://repo.maven.apache.org/maven2 -->
+    <!-- Custom repos are added using <repositories> -->
+    <!-- Plugin repos are identical to dependencies (may or may not be in same repo) added using <pluginRepositories> -->
+    <!-- Recommended: use two different repos for snapshots/rcs/milestones/etc and actual releases -->
+
+    <repositories>
+        <repository>
+            <id>spring-snapshot</id>
+            <name>Spring Maven SNAPSHOT</name>
+            <url>http://repo.springsource.org/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled> <!-- Downloads only snapshot -->
+            </snapshots>
+            <releases>
+                <enabled>false</enabled> <!-- And not releases -->
+            </releases>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>5.1.0.BUILD-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
